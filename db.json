@@ -1,0 +1,131 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "createDate": "24 Sep 2000",
+      "createdBy": "Brad Pitt, George Fusaro",
+      "patient": "Antonio, Arturo Fusaro",
+      "patientDob": "24 Sep 1998",
+      "referralType": "Radiology",
+      "provider": "Elite Care Medical Center",
+      "status": "Created"
+    },
+    {
+      "id": 2,
+      "createDate": "18 Sep 2005",
+      "createdBy": "Brad Pitt",
+      "patient": "Sam Smith",
+      "patientDob": "24 Sep 1998",
+      "referralType": "Pathology",
+      "provider": "Elite Care Medical Center",
+      "status": "Sent",
+      "details": {
+        "Referrals details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac pharetra ligula.",
+        "Patient details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac pharetra ligula.",
+        "Clinic details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac pharetra ligula.",
+        "Status details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac pharetra ligula."
+      }
+    },
+    {
+      "id": 3,
+      "createDate": "07 Sep 2006",
+      "createdBy": "Brad Pitt",
+      "patient": "Sam Smith",
+      "patientDob": "24 Sep 1998",
+      "referralType": "Radiology",
+      "provider": "Elite Care Medical Center",
+      "status": "Viewed"
+    },
+    {
+      "id": 4,
+      "createDate": "02 Sep 2007",
+      "createdBy": "Brad Pitt",
+      "patient": "Sam Smith",
+      "patientDob": "24 Sep 1998",
+      "referralType": "Pathology",
+      "provider": "Elite Care Medical Center",
+      "status": "Used"
+    },
+    {
+      "id": 5,
+      "createDate": "15 Sep 2004",
+      "createdBy": "Brad Pitt",
+      "patient": "Sam Smith",
+      "patientDob": "24 Sep 1998",
+      "referralType": "Radiology",
+      "provider": "Elite Care Medical Center",
+      "status": "Rejected"
+    },
+    {
+      "id": 6,
+      "createDate": "11 Sep 2008",
+      "createdBy": "Brad Pitt",
+      "patient": "Sam Smith",
+      "patientDob": "24 Sep 1998",
+      "referralType": "Pathology",
+      "provider": "Elite Care Medical Center",
+      "status": "Waitlist"
+    },
+    {
+      "id": 7,
+      "createDate": "08 Sep 2008",
+      "createdBy": "Brad Pitt",
+      "patient": "Sam Smith",
+      "patientDob": "24 Sep 1998",
+      "referralType": "Radiology",
+      "provider": "Elite Care Medical Center",
+      "status": "Expired"
+    },
+    {
+      "id": 8,
+      "createDate": "14 Sep 2008",
+      "createdBy": "Brad Pitt",
+      "patient": "Sam Smith",
+      "patientDob": "24 Sep 1998",
+      "referralType": "Pathology",
+      "provider": "Elite Care Medical Center",
+      "status": "Completed"
+    },
+    {
+      "id": 9,
+      "createDate": "23 Sep 2008",
+      "createdBy": "Brad Pitt",
+      "patient": "Sam Smith",
+      "patientDob": "24 Sep 1998",
+      "referralType": "Radiology",
+      "provider": "Elite Care Medical Center",
+      "status": "Archived"
+    },
+    {
+      "id": 10,
+      "createDate": "17 Sep 2008",
+      "createdBy": "Brad Pitt",
+      "patient": "Sam Smith",
+      "patientDob": "24 Sep 1998",
+      "referralType": "Pathology",
+      "provider": "Elite Care Medical Center",
+      "status": "Waitlist"
+    },
+    {
+      "createDate": "01/11/2023",
+      "createdBy": "Testing User",
+      "patient": "Testing Patient",
+      "patientDob": "2023-10-19",
+      "referralType": "Pathology",
+      "provider": "Elite Care Medical Center",
+      "status": "Sent",
+      "id": 11
+    },
+    {
+      "createDate": "02/11/2023",
+      "createdBy": "Testing 1",
+      "patient": "Patient 1",
+      "patientDob": "2023-10-10",
+      "referralType": "Pathology",
+      "provider": "Elite Care Medical Center",
+      "status": "Created",
+      "id": 12
+    }
+  ],
+  "details": []
+}

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radiology</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./radio.css" />
+  </head>
+  <body>
+
+    <div class="main-container">
+
+      <!-- header-container - - - - - - - - - - - - - -  -->
+
+      <div class="flex-box">
+        <div class="content">
+          <div>
+            <img
+              src="./../assets/icons/ReferralWhiteIcon.svg"
+              alt="ReferralIcon"
+            />
+          </div>
+          <div class="referral-id-text">
+            <img src="./../assets/icons/Group.svg" alt="ReferralText" />
+            <div class="details">
+              <p class="selected-type">Selected Type</p>
+              <div class="line"></div>
+              <p class="phone-number">0434 677 214</p>
+            </div>
+          </div>
+        </div>
+        <p class="referral-id">REQUEST ID #1021</p>
+        <div>
+          <img src="./../assets/icons/health_care_ic.svg" alt="Health care" />
+        </div>
+      </div>
+
+      <!-- patient-details-container - - - - - - - - - - - - - -  -->
+
+      <div class="patient-details-container">
+        <div class=" patient-section">
+          <div class="patient-section-text">
+            <div class="main-headings">
+              Patint Details
+            </div>
+            <div class="patient-section-btns">
+              <button class="edit-btn">
+                Edit Patient <i class="fas fa-pencil-alt icon-small"></i>
+              </button>
+              <button class="change-btn">
+                Change Patient <i class="fas fa-search icon-small"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="patients-form-details">
+            <form>
+              <div class="row">
+                <div class="surname">
+                  <label class="inp-label" for="name">Name </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Name"
+                    required
+                  />
+                </div>
+                <div class="surname">
+                  <label class="inp-label" for="surname">Surname </label>
+                  <input
+                    type="text"
+                    id="surname"
+                    name="surname"
+                    placeholder="Surname"
+                    required
+                  />
+                </div>
+                <div class="dob">
+                  <label class="inp-label" for="dob">Date of birth </label>
+                  <input
+                    type="text"
+                    id="dob"
+                    name="dob"
+                    placeholder="dob"
+                    required
+                  />
+                </div>
+                <div class="gender">
+                  <label class="inp-label" for="gender">Gender </label>
+                  <input
+                    type="text"
+                    id="gender"
+                    name="gender"
+                    placeholder="Gender"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="address">
+                  <label class="inp-label" for="address">Address </label>
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    placeholder="Address"
+                    required
+                  />
+                </div>
+                <div class="suburb">
+                  <label class="inp-label" for="suburb">Suburb </label>
+                  <input
+                    type="text"
+                    id="suburb"
+                    name="suburb"
+                    placeholder="Suburb"
+                    required
+                  />
+                </div>
+                <div class="state">
+                  <label class="inp-label" for="state">State </label>
+                  <input
+                    type="text"
+                    id="state"
+                    name="state"
+                    placeholder="State"
+                    required
+                  />
+                </div>
+                <div class="postcode">
+                  <label class="inp-label" for="postcode">Postcode </label>
+                  <input
+                    type="text"
+                    id="postcode"
+                    name="postcode"
+                    placeholder="Postcode"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row2">
+                <div class="email">
+                  <label class="inp-label" for="email">Email </label>
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="phonenumber">
+                  <label class="inp-label" for="phonenumber"
+                    >Phone number
+                  </label>
+                  <input
+                    type="text"
+                    id="phonenumber"
+                    name="phonenumber"
+                    placeholder="Phone number "
+                    required
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="medicare-section">
+          <div class="main-headings">
+            Medicare Details 
+          </div>
+          <form >
+            <div class="inputs">
+              <div class="medicarenumber">
+                <label class="inp-label" for="medicarenumber">Medicare Number <span style="color: red;">*</span></label>
+                <input type="text" id="medicarenumber" name="medicarenumber" placeholder="Medicare Number" required>
+              </div> <div class="expirydate">
+                <label class="inp-label" for="expirydate">Expiry Date <span style="color: red;">*</span></label>
+                <input type="text" id="expirydate" name="expirydate" placeholder="Expiry Date" required>
+              </div>
+            </div>
+
+            <div class="check-box">
+              <div>
+
+                <input type="checkbox" id="pension" name="pension">
+                <label for="pension">Pension</label><br>
+              </div>
+<div>
+
+  <input type="checkbox" id="healthcarecard" name="healthcarecard">
+  <label for="healthcarecard">Health Care Card</label><br>
+</div>
+<div>
+
+  <input type="checkbox" id="dva" name="dva">
+  <label for="dva">DVA</label><br>
+</div>
+</div>
+
+<div class="main-headings" style="margin-top: 20px">
+  My Health Record
+</div>
+<div style="margin-top: 18px">
+
+  <input type="checkbox" id="healthrecord" name="healthrecord">
+  <label for="healthrecord">Do not send to My Health Record</label><br>
+</div>
+          </form>
+        </div>
+      </div>
+      
+      <div class="patient-status-main-container">
+        <div class="data">
+<div>
+
+  <div class="status-text">
+    <div class="main-headings">
+      Examination Required*
+    </div>
+    <div class="urgent-area">
+      <div>
+
+        <input type="checkbox" id="urgent" name="urgent">
+        <label for="urgent">Urgent</label>
+      </div>
+      <div class="input" style="margin-right: 16px;">
+        <input  class="white-styled-input" type="text" id="fillhere" name="fillhere" placeholder="Fill here" required>
+      </div>
+    </div>
+    
+  </div>
+ 
+    <textarea name="" id="" cols="30" rows="7" class="textarea" style="margin-top: 15px;"></textarea>
+</div>
+<div>
+  <div class="main-headings">
+    Clinical Notes*
+  </div>
+  <textarea name="" id="" cols="30" rows="10" class="textarea" style="margin-top: 15px;"></textarea>
+</div>
+
+<div>
+  <div class="main-headings">
+    Send a copy of results to
+  </div>
+  <textarea name="" id="" cols="30" rows="4" class="textarea" style="margin-top: 15px;"></textarea>
+</div>
+          
+        </div>
+
+        <div class="status-checks">
+          <div class="main-headings">
+            Patient Status
+          </div>
+
+          <div class="check-section">
+            <div>
+              <div class="secondary-heading">
+               Contrast allergy
+              </div>
+              <div class="checkboxes">
+                <div class="checkbox">
+                    <input type="checkbox" id="no" name="no" value="no">
+                    <label for="no">No</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="yes" name="yes" value="yes">
+                    <label for="yes">Yes</label>
+                </div>
+               
+            </div>
+            </div>
+            <div>
+              <div class="secondary-heading">
+              Renal impairment
+              </div>
+              <div class="checkboxes">
+                <div class="checkbox">
+                    <input type="checkbox" id="no" name="no" value="no">
+                    <label for="no">No</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="yes" name="yes" value="yes">
+                    <label for="yes">Yes</label>
+                </div>
+               
+            </div>
+            </div>
+            <div>
+              <div class="secondary-heading">
+              Pregnant
+              </div>
+              <div class="checkboxes">
+                <div class="checkbox">
+                    <input type="checkbox" id="no" name="no" value="no">
+                    <label for="no">No</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="yes" name="yes" value="yes">
+                    <label for="yes">Yes</label>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="unsure" name="unsure" value="unsure">
+                  <label for="unsure">Unsure</label>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="notapplicable" name="notapplicable" value="notapplicable">
+                <label for="notapplicable">Not Applicable</label>
+            </div>
+               
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="practitioner-details-signature-container">
+        <div class="practitioner-form-section">
+
+          <div class="main-headings">
+            Practitioner Details
+            </div>
+
+            <div class="signature-form-details">
+              <form>
+                <div class="row">
+                  <div class="fullname">
+                    <label for="fullname">Practitioner Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+                  </div>
+                  <div class="providernumber">
+                    <label for="providernumber">Provider Number</label>
+                    <input type="text" id="providernumber" name="providernumber" placeholder="Provider Number" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="clientname">
+                    <label for="clientname">Client Name<span style="color: red;">*</span></label>
+                    <input type="text" id="clientname" name="clientname" placeholder="Client Name" required>
+                  </div>
+                </div>
+                <div class="row">
+                
+                  <div class="address">
+                    <label for="address">Address <span style="color: red;">*</span></label>
+                    <input type="text" id="address" name="address" placeholder="Address" required>
+                  </div>
+                  <div class="suburb">
+                    <label for="suburb">Suburb <span style="color: red;">*</span></label>
+                    <input type="text" id="suburb" name="suburb" placeholder="Suburb" required>
+                  </div>
+                  <div class="state">
+                    <label for="state">State <span style="color: red;">*</span></label>
+                    <input type="text" id="state" name="state" placeholder="State" required>
+                  </div>
+                  <div class="postcode">
+                    <label for="postcode">Postcode <span style="color: red;">*</span></label>
+                    <input type="text" id="postcode" name="postcode" placeholder="Postcode" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="email">
+                    <label for="email">Email <span style="color: red;">*</span></label>
+                    <input type="text" id="email" name="email" placeholder="Email" required>
+                  </div>
+                  <div class="phonenumber">
+                    <label for="phonenumber">Phone Number <span style="color: red;">*</span></label>
+                    <input type="text" id="phonenumber" name="phonenumber" placeholder="Phone Number" required>
+                  </div>
+                </div>
+              </form>
+            </div>
+            
+  
+            
+      </div>
+
+      <div class="practitioner-form-signature-section">
+        <div class="main-headings">
+          Practitioner Signature
+          </div>
+
+          <form class="practitioner-signature-form">
+            <div >
+              <label class="inp-label" for="medicarenumber">Doctor Signature <span style="color: red;" >*</span></label>
+              <input style="width: 94%" type="text" id="doctorsignature" name="doctorsignature" placeholder="Doctor Signature" required class="white-styled-input" >
+            </div>
+
+            <div >
+              <label class="inp-label" for="medicarenumber">Date <span style="color: red;" >*</span></label>
+              <input style="width: 94%" type="text" id="date" name="date" placeholder="Date" required class="white-styled-input" >
+            </div>
+
+            <div class="signature-form-text">
+              Your doctor has recommanded you attend
+              eReferrals Radiology. <br />
+              You may choose another provder but please
+              discuss this with your doctor first.
+            </div>
+            
+          </form>
+      </div>
+
+    </div>
+
+   
+     
+          
+  </body>
+</html>
