@@ -113,8 +113,8 @@ const ReferralRow = ({
   toggleRowExpansion,
   isExpanded
 }) => {
-  console.log(referral)
   const [anchorEl, setAnchorEl] = useState(null)
+  const [isDownloading, setIsDownloading] = useState(false)
 
   const referralIcon = getReferralIcon(referral.type)
 
@@ -140,18 +140,23 @@ const ReferralRow = ({
 
   const isPopoverOpen = Boolean(anchorEl)
 
-  const getReferralReportPdf = async (id) => {
-  try {
-    const response = await ReferralService.downloadReferralReportPdf(id);
+  const getReferralReportPdf = async id => {
+    setIsDownloading(true)
 
-    const blob = new Blob([response.data], { type: 'application/pdf' });
-    const blobUrl = window.URL.createObjectURL(blob);
-    window.open(blobUrl, '_blank');
-    setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1000 * 60); // 1 min
-  } catch (error) {
-    return error;
+    try {
+      const response = await ReferralService.downloadReferralReportPdf(id)
+
+      const blob = new Blob([response.data], { type: 'application/pdf' })
+      const blobUrl = window.URL.createObjectURL(blob)
+      window.open(blobUrl, '_blank')
+
+      setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1000 * 60) // 1 minute
+    } catch (error) {
+      console.error('Download error:', error)
+    } finally {
+      setIsDownloading(false)
+    }
   }
-};
 
   return (
     <>
@@ -378,7 +383,6 @@ const ReferralRow = ({
                           fontSize: '14px',
                           padding: '5px 10px',
                           maxHeight: '24px',
-                          // overflow: "hidden",
                           whiteSpace: 'nowrap',
                           textOverflow: 'ellipsis',
                           border: '1px solid red'
@@ -386,10 +390,40 @@ const ReferralRow = ({
                       />
                     </Tooltip>
                     <button
-                      onClick={() => getReferralReportPdf(referral.id)}
+                      onClick={e => {
+                        e.stopPropagation()
+                        getReferralReportPdf(referral.id)
+                      }}
+                      disabled={isDownloading}
                       className='result-download-btn'
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        padding: '8px 16px',
+                        borderRadius: '5px',
+                        backgroundColor: '#1976d2',
+                        color: '#fff',
+                        border: 'none',
+                        cursor: isDownloading ? 'not-allowed' : 'pointer'
+                      }}
                     >
-                      Download
+                      {isDownloading ? (
+                        <span
+                          className='loader'
+                          style={{
+                            width: '16px',
+                            height: '16px',
+                            margin: '0 20px',
+                            border: '2px solid #fff',
+                            borderTop: '2px solid transparent',
+                            borderRadius: '50%',
+                            animation: 'spin 1s linear infinite'
+                          }}
+                        />
+                      ) : (
+                        'Download'
+                      )}
                     </button>
                   </TableCell>
 

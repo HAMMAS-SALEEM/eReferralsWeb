@@ -611,17 +611,17 @@ canvas {
 
 
 .result-download-btn {
-  padding: 4px 20px !important;
-  font-size: 14px !important;
-  font-weight: 600 !important;
-  display: flex !important;
-  color: #fff !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 10px !important;
-  flex-shrink: 0 !important;
-  cursor: pointer !important;
-  border-radius: 60px !important;
+  padding: 4px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: 60px;
   background: var(--Final,
       linear-gradient(116deg, #143056 -4.61%, #418fd2 111.1%),
       #fff);
@@ -761,4 +761,10 @@ canvas {
   justify-content: space-between;
   gap: 50px;
   width: 100%;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
