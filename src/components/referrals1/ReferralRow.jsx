@@ -393,7 +393,11 @@ const ReferralRow = ({
                     </Tooltip>
                     {referral.status === 'RESULTS' && (
                       <>
-                        <a href={referral.results_data.url}>Get Results</a>
+                        {
+                          referral.results_data?.url && (
+                            <a href={referral.results_data.url}>Get Results</a>
+                          )
+                        }
                         <button
                           onClick={e => {
                             e.stopPropagation()
