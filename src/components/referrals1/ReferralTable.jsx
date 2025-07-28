@@ -161,6 +161,8 @@ const ReferralTable = ({
 
   useEffect(() => {}, [rows, sortedRows]);
 
+  console.log(rows);
+
   return (
     <div style={{ position: "relative" }}>
       {/* Top shadow */}

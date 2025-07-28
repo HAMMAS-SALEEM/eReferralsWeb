@@ -158,6 +158,8 @@ const ReferralRow = ({
     }
   }
 
+  console.log(referral.status)
+
   return (
     <>
       <TableRow
@@ -389,42 +391,47 @@ const ReferralRow = ({
                         }}
                       />
                     </Tooltip>
-                    <button
-                      onClick={e => {
-                        e.stopPropagation()
-                        getReferralReportPdf(referral.id)
-                      }}
-                      disabled={isDownloading}
-                      className='result-download-btn'
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '8px',
-                        padding: '8px 16px',
-                        borderRadius: '5px',
-                        backgroundColor: '#1976d2',
-                        color: '#fff',
-                        border: 'none',
-                        cursor: isDownloading ? 'not-allowed' : 'pointer'
-                      }}
-                    >
-                      {isDownloading ? (
-                        <span
-                          className='loader'
-                          style={{
-                            width: '16px',
-                            height: '16px',
-                            margin: '0 20px',
-                            border: '2px solid #fff',
-                            borderTop: '2px solid transparent',
-                            borderRadius: '50%',
-                            animation: 'spin 1s linear infinite'
+                    {referral.status === 'RESULTS' && (
+                      <>
+                        <a href={referral.results_data.url}>Get Results</a>
+                        <button
+                          onClick={e => {
+                            e.stopPropagation()
+                            getReferralReportPdf(referral.id)
                           }}
-                        />
-                      ) : (
-                        'Download'
-                      )}
-                    </button>
+                          disabled={isDownloading}
+                          className='result-download-btn'
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            padding: '8px 16px',
+                            borderRadius: '5px',
+                            backgroundColor: '#1976d2',
+                            color: '#fff',
+                            border: 'none',
+                            cursor: isDownloading ? 'not-allowed' : 'pointer'
+                          }}
+                        >
+                          {isDownloading ? (
+                            <span
+                              className='loader'
+                              style={{
+                                width: '16px',
+                                height: '16px',
+                                margin: '0 20px',
+                                border: '2px solid #fff',
+                                borderTop: '2px solid transparent',
+                                borderRadius: '50%',
+                                animation: 'spin 1s linear infinite'
+                              }}
+                            />
+                          ) : (
+                            'Download'
+                          )}
+                        </button>
+                      </>
+                    )}
                   </TableCell>
 
                   {/* MoreVertIcon for Action Buttons */}

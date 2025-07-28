@@ -2,7 +2,7 @@ import axios from "axios";
 import AuthService from "../services/AuthService";
 
 const service = axios.create({
-  baseURL: "https://app.erequests.com.au/api",
+  baseURL: "https://dev.erequests.com.au/api",
   timeout: 60000,
 });
 

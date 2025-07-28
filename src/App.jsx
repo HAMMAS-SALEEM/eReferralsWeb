@@ -70,10 +70,7 @@ function App () {
                     <Route path='/settings' element={<Settings />} />
                     <Route path='/hospitals' element={<Hospitals />} />
                     <Route path='/referrals' element={<Referrals />} />
-                    {/* <Route path='/subscription' element={<Subscription />} /> */}
-                    {/* <div className='bg-gray-100 min-h-screen p-4'> */}
-                      <Route path='/subscription' element={<Subscription />} />
-                    {/* </div> */}
+                    <Route path='/subscription' element={<Subscription />} />
                     <Route path='/add-referral/*' element={<AddReferral />} />
                   </Route>
                 </Routes>
