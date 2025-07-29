@@ -80,7 +80,12 @@ const ReferralTableHead = ({
         <TableCell
           key={headCell.id}
           align= {headCell.sortable ? "left" : "right"}
-          sx={ headCell.sortable ? {
+          sx={ headCell.id == 'status' ? {
+            width: '18%',
+            paddingLeft: "8px",
+            paddingRight: "8px",
+          }
+            : headCell.sortable ? {
             width: '10%',
             paddingLeft: "8px",
             paddingRight: "8px",

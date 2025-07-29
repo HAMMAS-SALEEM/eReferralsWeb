@@ -22,7 +22,7 @@ const StyledLabel = styled(Typography)(({ theme }) => ({
 }));
 
 const StyledChip = styled(Chip)(({ theme, chipWidth }) => ({
-  width: 130, // Dynamic width based on the widest Chip
+  width: 200, // Dynamic width based on the widest Chip
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
@@ -165,10 +165,11 @@ const FilterSection = ({
 
   // Status labels with name, label, and color
   const statusLabels = [
-    { name: "draft", label: "Draft", color: "red" },
-    { name: "sent", label: "Sent", color: "#83BCFF" },
-    { name: "booked", label: "Booked", color: "#FFF383" },
-    { name: "completed", label: "Completed", color: "#42FF00" },
+    { name: "draft", label: "Unfinished Draft", color: "red" },
+    { name: "sent", label: "Request Sent", color: "#83BCFF" },
+    { name: "booked", label: "Investigation Booked", color: "#FFF383" },
+    { name: "completed", label: "Test Completed", color: "#42FF00" },
+    { name: "results", label: "Results Available", color: "#ff03c8ff" },
   ];
 
   // Effect to calculate maximum chip width after rendering
@@ -194,7 +195,7 @@ const FilterSection = ({
         borderRadius: "8px",
         marginBottom: "20px",
         gap: { xs: "8px", sm: "12px", md: "16px" }, // Responsive gap
-        maxHeight: { xs: "auto", md: "136px" }, // Adjust maxHeight on smaller screens
+        maxHeight: { xs: "auto", md: "164px" }, // Adjust maxHeight on smaller screens
         transition: "max-height 0.3s ease", // Smooth transition
         // flexWrap: "wrap", // Wrap items on smaller screens
       }}

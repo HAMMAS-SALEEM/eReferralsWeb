@@ -41,7 +41,7 @@ const getStatusChip = status => {
   switch (status) {
     case 'DRAFT':
       return {
-        label: 'Draft',
+        label: 'Unfinished Draft',
         color: 'info',
         circleStyles: {
           fill: 'red',
@@ -50,7 +50,7 @@ const getStatusChip = status => {
       }
     case 'SENT':
       return {
-        label: 'Sent',
+        label: 'Request Sent',
         color: 'primary',
         circleStyles: {
           fill: '#83BCFF',
@@ -59,7 +59,7 @@ const getStatusChip = status => {
       }
     case 'BOOKED':
       return {
-        label: 'Booked',
+        label: 'Investigation Booked',
         color: 'warning',
         circleStyles: {
           fill: '#FFF383',
@@ -68,7 +68,7 @@ const getStatusChip = status => {
       }
     case 'COMPLETED':
       return {
-        label: 'Completed',
+        label: 'Test Completed',
         color: 'success',
         circleStyles: {
           fill: '#42FF00',
@@ -77,7 +77,7 @@ const getStatusChip = status => {
       }
     case 'RESULTS':
       return {
-        label: 'Results',
+        label: 'Results Available',
         color: 'success',
         circleStyles: {
           fill: '#ff03c8ff',
@@ -150,15 +150,13 @@ const ReferralRow = ({
       const blobUrl = window.URL.createObjectURL(blob)
       window.open(blobUrl, '_blank')
 
-      setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1000 * 60) // 1 minute
+      setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1000 * 60)
     } catch (error) {
       console.error('Download error:', error)
     } finally {
       setIsDownloading(false)
     }
   }
-
-  console.log(referral.status)
 
   return (
     <>
@@ -346,7 +344,7 @@ const ReferralRow = ({
                   {/* Referral Status */}
                   <TableCell
                     sx={{
-                      width: '10%',
+                      width: '18%',
                       borderBottom: 'none',
                       padding: '8px',
                       display: 'flex',
@@ -387,7 +385,8 @@ const ReferralRow = ({
                           maxHeight: '24px',
                           whiteSpace: 'nowrap',
                           textOverflow: 'ellipsis',
-                          border: '1px solid red'
+                          border: '1px solid red',
+                          width: '200px'
                         }}
                       />
                     </Tooltip>
