@@ -37,7 +37,7 @@ const PatientStatusPathology = () => {
     is_on_hormone_therapy,
     test_required,
     clinical_notes,
-    send_results_to_emails,
+    send_results_to,
     payment_method,
     hospital_status,
   } = useSelector((state) => state.referral.form);
@@ -163,7 +163,7 @@ const PatientStatusPathology = () => {
             fullWidth
             multiline
             rows={4}
-            value={send_results_to_emails}
+            value={send_results_to}
             onChange={(e) => dispatch(setSendResultsToEmails(e.target.value))}
           />
         </Grid>

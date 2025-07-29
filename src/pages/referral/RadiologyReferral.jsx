@@ -52,7 +52,7 @@ const RadiologyReferral = ({
         referral?.form?.clinical_notes === " "
           ? ""
           : referral?.form?.clinical_notes || "",
-      send_results_to_emails: referral?.send_results_to_emails || "",
+      send_results_to: referral?.send_results_to || "",
       has_contrast_allergy: referral?.form?.has_contrast_allergy ?? null,
       has_renal_impairment: referral?.form?.has_renal_impairment ?? null,
       egfr: referral?.form?.egfr || "",
@@ -136,7 +136,7 @@ const RadiologyReferral = ({
     delete formToSave.is_urgent;
     delete formToSave.urgent_reason;
     delete formToSave.do_not_send_to_my_health_record;
-    delete formToSave.send_results_to_emails;
+    delete formToSave.send_results_to;
     // Validation checks
     if (!data.examination_required || data.examination_required.trim() === "") {
       toast.error("Please enter the examination required before proceeding.");
@@ -164,7 +164,7 @@ const RadiologyReferral = ({
       is_urgent: data.is_urgent,
       urgent_reason: data.urgent_reason || "",
       do_not_send_to_my_health_record: data.do_not_send_to_my_health_record,
-      send_results_to_emails: data.send_results_to_emails,
+      send_results_to: data.send_results_to,
       type: "RADIOLOGY",
       signed_date: data.signed_date,
     };
@@ -178,7 +178,7 @@ const RadiologyReferral = ({
     delete formToSave.is_urgent;
     delete formToSave.urgent_reason;
     delete formToSave.do_not_send_to_my_health_record;
-    delete formToSave.send_results_to_emails;
+    delete formToSave.send_results_to;
 
     const signedDateToSave =
       data.signed_date && data.signed_date.trim() !== ""
@@ -198,7 +198,7 @@ const RadiologyReferral = ({
       is_urgent: data.is_urgent,
       urgent_reason: data.urgent_reason || "",
       do_not_send_to_my_health_record: data.do_not_send_to_my_health_record,
-      send_results_to_emails: data.send_results_to_emails,
+      send_results_to: data.send_results_to,
     };
 
     // Save the draft referral

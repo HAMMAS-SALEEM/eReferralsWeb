@@ -25,7 +25,7 @@ const SendResultsTo = ({ mode }) => {
         multiline
         rows={5}
         fullWidth
-        {...register("send_results_to_emails")}
+        {...register("send_results_to")}
         disabled={isReadOnly}
         sx={{
           fontSize: "16px",
@@ -38,9 +38,9 @@ const SendResultsTo = ({ mode }) => {
           },
         }}
       />
-      {errors?.send_results_to_emails && (
+      {errors?.send_results_to && (
         <Typography color="error" variant="body2">
-          {errors.send_results_to_emails.message}
+          {errors.send_results_to.message}
         </Typography>
       )}
     </Box>

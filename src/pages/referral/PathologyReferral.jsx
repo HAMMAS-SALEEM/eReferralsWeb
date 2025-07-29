@@ -38,7 +38,7 @@ const PathologyReferral = ({
       urgent_reason: referral?.urgent_reason || "",
       clinical_notes: referral?.form?.clinical_notes || "",
       is_self_determined: referral?.form?.is_self_determined || true,
-      send_results_to_emails: referral?.send_results_to_emails || "",
+      send_results_to: referral?.send_results_to || "",
       has_pension: patient?.has_pension || false,
       has_healthcare_card: patient?.has_healthcare_card || false,
       has_dva: patient?.has_dva || false,
@@ -120,7 +120,7 @@ const PathologyReferral = ({
     delete formToSave.is_urgent;
     delete formToSave.urgent_reason;
     delete formToSave.do_not_send_to_my_health_record;
-    delete formToSave.send_results_to_emails;
+    delete formToSave.send_results_to;
 
     // Validation checks
     if (!data.test_required || data.test_required.trim() === "") {
@@ -151,7 +151,7 @@ const PathologyReferral = ({
       is_urgent: data.is_urgent,
       urgent_reason: data.urgent_reason || null,
       do_not_send_to_my_health_record: data.do_not_send_to_my_health_record,
-      send_results_to_emails: data.send_results_to_emails || null,
+      send_results_to: data.send_results_to || null,
     };
 
     // Save the referral
@@ -180,7 +180,7 @@ const PathologyReferral = ({
       is_urgent: data.is_urgent,
       urgent_reason: data.urgent_reason || null,
       do_not_send_to_my_health_record: data.do_not_send_to_my_health_record,
-      send_results_to_emails: data.send_results_to_emails || null,
+      send_results_to: data.send_results_to || null,
     };
 
     // Save the draft referral

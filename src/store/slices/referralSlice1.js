@@ -84,7 +84,7 @@ const referralSlice1 = createSlice({
     },
 
     setSendResultsToEmails: (state, action) => {
-      state.send_results_to_emails = action.payload;
+      state.send_results_to = action.payload;
     },
     addSendResultEmail: (state, action) => {
       if (!state.to_emails) {

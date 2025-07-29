@@ -29,7 +29,7 @@ const FileReferral = ({
     defaultValues: {
       is_urgent: referral?.is_urgent || false,
       urgent_reason: referral?.urgent_reason || "",
-      send_results_to_emails: referral?.send_results_to_emails || "",
+      send_results_to: referral?.send_results_to || "",
       signed_date: referral?.signed_date || "",
     },
     mode: "onSubmit",
@@ -44,7 +44,7 @@ const FileReferral = ({
       {
         is_urgent: false,
         urgent_reason: "",
-        send_results_to_emails: "",
+        send_results_to: "",
       },
       {
         keepValues: true, // Keeps other fields unchanged
@@ -107,7 +107,7 @@ const FileReferral = ({
       ...(isEditModeLocal && referral),
       is_urgent: data.is_urgent,
       urgent_reason: data.urgent_reason,
-      send_results_to_emails: data.send_results_to_emails,
+      send_results_to: data.send_results_to,
       type: mode === "create" ? referralType : referral?.type,
       signed_date: signedDateToUse,
     };
