@@ -18,6 +18,7 @@ const PractitionerDetails = ({
 }) => {
   const fullColumn = 12;
   const halfColumn = 6;
+  console.log(profile)
 
   return (
     <Grid
@@ -196,6 +197,20 @@ const PractitionerDetails = ({
                     }}
                   >
                     {profile?.organisation?.phone}
+                  </Typography>
+                </Grid>
+                <Grid item xs={halfColumn}>
+                  <Typography variant="label">Fax</Typography>
+                  <Typography
+                    sx={{
+                      height: "28px",
+                      lineHeight: "28px",
+                      pl: "10px",
+                      borderRadius: "15px",
+                      bgcolor: "#C8C8C8",
+                    }}
+                  >
+                    {profile?.organisation?.fax}
                   </Typography>
                 </Grid>
               </Grid>

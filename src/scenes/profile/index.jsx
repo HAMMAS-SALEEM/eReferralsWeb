@@ -101,6 +101,7 @@ const Profile = () => {
   ];
 
   const profileData = useSelector((state) => state.profile.data);
+  console.log(profileData);
 
   const [isOrganisationAdmin, setIsOrganisationAdmin] = useState(
     profileData?.is_organisation_admin || false
@@ -112,6 +113,7 @@ const Profile = () => {
     provider_no: "",
     email: "",
     phone: "",
+    fax: "",
   });
 
   const [organizationDetails, setOrganizationDetails] = useState({
@@ -154,6 +156,7 @@ const Profile = () => {
         provider_no: doctor?.provider_no || "",
         email: doctor?.email || "",
         phone: doctor?.phone || "",
+        fax: doctor?.fax || "",
       });
       setOrganizationDetails({
         name: organisation?.name || "",
@@ -174,7 +177,7 @@ const Profile = () => {
       setPractitionerDetails({
         first_name: doctor?.first_name || "Mario",
         last_name: doctor?.last_name || "Polverino",
-        provider_no: doctor?.provider_no || "000000000",
+        provider_no: doctor?.provider_no || "1234",
         email: doctor?.email || "drmario@gmail.com",
         phoneNumber: doctor?.phone || "78797879",
       });

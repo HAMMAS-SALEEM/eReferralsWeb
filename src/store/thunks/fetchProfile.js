@@ -6,6 +6,7 @@ const fetchProfile = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await ProfileService.getProfile();
+      console.log("Profile fetched successfully:", response.data);
       return { data: response.data, status: response.status };
     } catch (error) {
       return rejectWithValue(error.response.data);
