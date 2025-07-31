@@ -18,7 +18,6 @@ const PractitionerDetails = ({
 }) => {
   const fullColumn = 12;
   const halfColumn = 6;
-  console.log(profile)
 
   return (
     <Grid

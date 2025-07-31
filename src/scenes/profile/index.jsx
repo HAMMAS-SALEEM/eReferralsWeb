@@ -101,7 +101,6 @@ const Profile = () => {
   ];
 
   const profileData = useSelector((state) => state.profile.data);
-  console.log(profileData);
 
   const [isOrganisationAdmin, setIsOrganisationAdmin] = useState(
     profileData?.is_organisation_admin || false
